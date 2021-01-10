@@ -1,9 +1,11 @@
+//edited by Dev G. 1.10.2021
+
 #include <stdio.h>
 #include <conio.h>
 
 int main()
 {
-    int i=1,n,choice,fact=1,sum;
+    int i=1,n,choice,fact=1,sum,t=0;
 
     do
     {
@@ -19,19 +21,24 @@ int main()
             printf("\nEnter an integer:");
             scanf("%d",&n);
 
-            for(i=1;i<=(n-1);i++)
+            for(i=2;i<=n/2;i++)
             {
                 if(n%i==0)
-                {
-                    sum=sum+i;
-                }
+                t=1;
             }
-            if(sum==n)
+            if(n==1)
             {
-                printf("%d is perfect number :",n);
+                printf("%d is not prime number :",n);
             }
             else
-            printf("%d is not perfect number",n);
+            {
+                if (t==0)
+                printf("%d is prime number",n);
+                else
+                printf("%d is not prime number",n);
+                
+            }
+            printf("%d is perfect number",n);
             break;
 
      case 2:

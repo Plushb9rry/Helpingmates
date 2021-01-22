@@ -6,22 +6,24 @@
 {
     int i;
     char str[1000];
-    float time;
+    float gtime;
 
     printf("Enter your paragraph:");
     gets(str);
-    getchar();
+    puts(str);
+    
+    float a=strlen(str);
 
-    time=(strlen(str)/300);
+    gtime=(a/300);
 
-    if(strlen(str)<15)
+    if(a<15)
     {
     printf("Enter Valid Paragraph");
     }
 
     else
     {
-    printf("%f min read",time);
+    printf("%f min read",gtime);
     }
 
     return 0;
